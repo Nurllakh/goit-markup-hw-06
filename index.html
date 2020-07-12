@@ -43,7 +43,7 @@
     <section class="section-effective list">
       <div class="container">
       <h1 class="business">Эффективные решения</br> для вашего бизнеса</h1>
-      <button class="service" type="button" data-modal-open >Заказать услугу</button> 
+      <button class="service" type="button">Заказать услугу</button> 
     </div>
     </section>
 
@@ -390,42 +390,43 @@
     </div>
   </div>
     </footer>
-   <!---Модалка--->
-   <div class="backdrop is-hidden">
-      <div class="modal">
-        <button class="modal-close">
+    <div class="backdrop">
+        <div class="modal">
+          <form class="modal-form">
+            <button class="close"></button>
+            <b class="modal-text"> Оставьте свои данные, мы вам перезвоним</b>
+            <ul >
+              <li class="form-field">
+                <input type="text" class="form-input" name="name" id="name" placeholder="  ">
+                <label for="name" class="form-label">
+                  <svg >
+                    <use href="./images/person-black.svg"> </use>
+                 </svg> 
+                  <span >Имя</span>
+                </label>
+              </li>
+              <li class="form-field">
+                <input type="tel" class="form-input" name="tel" id="tel" placeholder="  ">
+                <label for="tel" class="form-label">
+                  <span>Телефон</span>
+                </label>
+              </li>
+              <li class="form-field">
+                <input type="email" class="form-input" name="mail" id="mail" placeholder="  ">
+                <label for="mail" class="form-label">
+                  <span>Почта</span>
+                </label>
+              </li>
+              <li class="form-field">
+                <label for="comment"> <span>Комментарий</span></label>
+                <textarea name="comment" id="comment"></textarea>
+              </li>
+            </ul>
 
-        </button>
+          </form>
 
-        <b class="modal-text"> Оставьте свои данные, мы вам перезвоним</b>
-        <form class="callback-form">
-          <ul>
-            <li class="input-group"> 
-              <input class="form-input" type="text" name="name" id="name" placeholder="  ">
-              <label for="name"></label>
-              <span>Имя</span>
-            </li>
-            <li class="input-group">
-              <input class="form-input" type="tel" name="phone" id="phone" placeholder=" ">
-              <label for="phone">
-                <span >Телефон</span>
-              </label>
-            </li>
-            <li class="input-group">
-              <input class="form-input" type="email" name="email" id="email" placeholder=" ">
-              <label><span>Почта</span></label>
-            </li>
-            <li>
-              <textarea class="comment" name="comment" id="comment" placeholder=" "></textarea>
-              <label class="comment-label" for="comment"> Комментарий 
-                
-              </label>
-            </li>
-          </ul>
-        </form>
+        </div>
+    </div>
 
-</div>
-   </div>
-    <script src="./js/modal.js"></script>
   </body>
 </html>
