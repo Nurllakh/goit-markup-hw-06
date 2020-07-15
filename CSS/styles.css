@@ -844,10 +844,21 @@ border-radius: 2px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), top 250ms
 }
 
- .comment:focus  .comment-label{
+
+ .comment:focus + .comment-label,
+ .comment:not(:placeholder-shown) + .comment{
     color: #2196F3;
     transform: translate(-26px, -36px);
+    
  }
+
+ .comment:hover + .comment-label,
+ .comment:not(:placeholder-shown) + .comment{
+    color: #2196F3;
+    transform: translate(-26px, -36px);
+    
+ }
+
  .icon {
      position: absolute;
      top: 50%;
@@ -864,9 +875,7 @@ border-radius: 2px;
      appearance:none
      position: absolute;
  }
- .checkbox-label {
-     
- }
+ 
  .checkbox-icon {
      display: inline-block;
      width: 20px;
@@ -885,4 +894,20 @@ border-radius: 2px;
      border-color:#2196F3 ;
  }
 
- 
+.close{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+}
+.close-svg {
+    margin: auto;
+    width: 15px;
+    height: 15px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
