@@ -875,7 +875,11 @@ border-radius: 2px;
     transform: translate(-26px, -36px);
     
  }
- 
+ .comment:hover, .comment:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
  .icon {
      position: absolute;
      top: 50%;
